@@ -22,16 +22,17 @@ public class Syllables {
 
 
             //This first boolean checks if there is not a vowel in front of currently selected letter.
-            final boolean b = UserInput.charAt(i + 1) != ('a') || UserInput.charAt(i + 1) != ('e') ||
+            boolean b = UserInput.charAt(i + 1) != ('a') || UserInput.charAt(i + 1) != ('e') ||
                     UserInput.charAt(i + 1) != ('i') || UserInput.charAt(i + 1) != ('o') || UserInput.charAt(i + 1) != ('u')
                     || UserInput.charAt(i + 1) != ('y');
+
             //This boolean checks if there is a vowel in front of the currently selected letter.
-            final boolean c = UserInput.charAt(i + 1) == ('a') || UserInput.charAt(i + 1) == ('e') ||
+            boolean c = UserInput.charAt(i + 1) == ('a') || UserInput.charAt(i + 1) == ('e') ||
                     UserInput.charAt(i + 1) == ('i') || UserInput.charAt(i + 1) == ('o') || UserInput.charAt(i + 1) == ('u')
                     || UserInput.charAt(i + 1) == ('y');
 
             //These first if, and else if statements check for vowel combinations, and only adds a syllable if there,
-            //Are no vowels next to eachother.
+            //Are no vowels next to each other.
             if (UserInput.charAt(i) == 'a' && b && !c) {
                 syllableCount = syllableCount + 1;
 
